@@ -1,0 +1,61 @@
+:root{--oscuro:#3F2C2E;--cafe:#925226;--ambar:#B7742E;--naranja:#E0901A;--crema:#EDE0D4;--beige:#E6CCB2;--texto:#F8F8EC}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--oscuro);color:var(--texto);line-height:1.5}
+h1,h2,h3{font-family:'Playfair Display',serif}
+a{color:var(--naranja)}
+nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:16px 5%;background:#2f2022}
+.logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:22px}
+nav a{color:var(--texto);text-decoration:none;padding-bottom:3px}
+nav a:hover,nav a.activo{border-bottom:2px solid var(--naranja)}
+#contador{background:var(--naranja);color:var(--oscuro);border-radius:12px;padding:0 8px;font-weight:700;font-size:.85rem;margin-left:4px}
+header.titulo{padding:48px 5% 24px}
+header.titulo h1{font-size:clamp(2rem,5vw,3.2rem)}
+header.titulo p{color:var(--beige);max-width:60ch;margin-top:8px}
+main{padding:0 5% 56px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;padding:48px 5%}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.1}
+.hero p{color:var(--beige);margin:16px 0 24px;max-width:50ch}
+.banner{width:100%;height:380px;object-fit:cover;border-radius:16px}
+.destacados{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:20px}
+.destacados li{background:var(--crema);color:var(--oscuro);border-radius:12px;overflow:hidden;font-weight:700;text-align:center;padding-bottom:12px}
+.destacados img{width:100%;aspect-ratio:1;object-fit:cover;margin-bottom:8px}
+h2.sec{margin:8px 0 20px;font-size:1.6rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px}
+.producto{background:var(--crema);color:var(--oscuro);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.producto img{width:100%;aspect-ratio:1;object-fit:cover}
+.producto div{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.producto p{font-size:.9rem}
+.precio{font-weight:700;color:var(--cafe);font-size:1.15rem}
+.btn{display:inline-block;background:var(--naranja);color:var(--oscuro);border:0;border-radius:8px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;margin-top:auto}
+.btn:hover{background:var(--ambar)}
+.btn:disabled{background:#7a6a62;color:#bbb;cursor:not-allowed}
+.btn-quitar{background:none;border:1px solid var(--beige);color:var(--beige);border-radius:6px;padding:6px 10px;cursor:pointer;font:inherit}
+.btn:focus-visible,input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--beige);outline-offset:2px}
+#mensaje{position:fixed;bottom:24px;right:24px;background:var(--naranja);color:var(--oscuro);padding:12px 20px;border-radius:10px;font-weight:700;opacity:0;transition:opacity .3s;pointer-events:none}
+#mensaje.visible{opacity:1}
+table{width:100%;border-collapse:collapse;background:#4d393b;border-radius:12px;overflow:hidden}
+th,td{padding:14px;text-align:left;border-bottom:1px solid #5d4749}
+th{background:var(--cafe)}
+td img{width:64px;height:64px;object-fit:cover;border-radius:8px;vertical-align:middle;margin-right:12px}
+input[type=text],input[type=email],input[type=password],input[type=date],input[type=tel]{width:100%;padding:10px 12px;border-radius:8px;border:2px solid var(--beige);background:var(--crema);color:var(--oscuro);font:inherit}
+input.cantidad{width:70px;text-align:center}
+.total{text-align:right;font-size:1.5rem;margin:24px 0;font-family:'Playfair Display',serif}
+.total span{color:var(--naranja)}
+.acciones{text-align:right}
+.sep{margin-top:20px;text-align:left}
+form.buscar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+form.buscar input{flex:1;min-width:220px;width:auto}
+form.formulario,#checkout{max-width:520px;display:flex;flex-direction:column;gap:16px}
+#checkout{margin-top:32px;background:#4d393b;padding:24px;border-radius:14px;max-width:560px}
+label{display:block;font-weight:700;margin-bottom:4px}
+fieldset{border:1px solid var(--beige);border-radius:10px;padding:12px 16px}
+legend{padding:0 8px;font-weight:700}
+fieldset label{display:inline-block;font-weight:400;margin-right:20px}
+.check label{font-weight:400;display:flex;gap:8px;align-items:center}
+.aviso{min-height:1.4em;font-weight:700;color:var(--naranja)}
+#ticket{background:var(--crema);color:var(--oscuro);padding:20px;border-radius:10px;margin-top:16px;font-family:monospace;white-space:pre-line}
+#resultados h2{margin-bottom:20px;font-size:1.5rem}
+#info-extra{margin-top:16px;max-width:70ch;color:var(--beige)}
+footer{text-align:center;padding:24px;background:#2f2022;color:var(--beige);font-size:.9rem}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.banner{height:240px}nav{justify-content:center}}

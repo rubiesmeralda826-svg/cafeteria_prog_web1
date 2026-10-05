@@ -30,9 +30,9 @@ El ticket se puede imprimir con el diálogo del navegador. El correo se prepara 
 
 ## Equipo
 
-- Juan Manuel Nucamendi Díaz: Registro + Búsqueda; juanvesta123@gmail.com.
-- Rubi Esmeralda De los Santos López: Catálogo + Carrito; correo genérico correo1@ejemplo.com.
-- Persona 3: Inicio + Quiénes somos; correo genérico correo3@ejemplo.com.
+- Juan Manuel Nucamendi Díaz: Registro + Búsqueda; juanvesta123@gmail.com
+- Rubi Esmeralda De los Santos López: Catálogo + Carrito; rubiesmeralda826@gmail.com
+- Edson Samuel Jiménez Silvestre: Inicio + Quiénes somos; edsonsam16072006@gmail.com
 
 ## Publicación pendiente de confirmar
 

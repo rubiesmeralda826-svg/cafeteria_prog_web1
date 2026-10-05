@@ -59,3 +59,18 @@ fieldset label{display:inline-block;font-weight:400;margin-right:20px}
 #info-extra{margin-top:16px;max-width:70ch;color:var(--beige)}
 footer{text-align:center;padding:24px;background:#2f2022;color:var(--beige);font-size:.9rem}
 @media(max-width:700px){.hero{grid-template-columns:1fr}.banner{height:240px}nav{justify-content:center}}
+[hidden]{display:none!important}
+.tabla-scroll{width:100%;overflow-x:auto}
+.nota{color:var(--beige);font-size:.9rem;margin-bottom:16px;max-width:70ch}
+#acciones-ticket{margin-top:16px}
+#acciones-ticket .nota{margin-top:12px}
+#mensaje{z-index:10;max-width:calc(100vw - 32px)}
+@media(max-width:700px){nav ul{justify-content:center;gap:12px 18px}.tabla-scroll table{min-width:600px}form.buscar input{min-width:0;flex-basis:100%}form.buscar .btn{width:100%}}
+@media print{
+ body{background:white;color:black}
+ nav,header.titulo,footer,#mensaje,#tabla-carrito,.total,.acciones,#vacio,#form-pago,#acciones-ticket,#checkout>h2,#checkout>.nota{display:none!important}
+ #checkout{display:block;background:white;padding:0;max-width:none;margin:0}
+ #ticket{background:white;color:black;padding:0}
+}
+
+nav a.logo,nav a.logo:hover{border-bottom:0;padding-bottom:0}

@@ -1,11 +1,105 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><title>Carrito | The Coffee Shop</title></head><body><nav><span class="logo">The Coffee Shop</span><ul><li><a href="index.html">Inicio</a></li><li><a href="registro.html">Registro</a></li><li><a href="nosotros.html">Quiénes somos</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="carrito.html" class="activo">Carrito <span id="contador">0</span></a></li><li><a href="busqueda.html">Búsqueda</a></li></ul></nav><header class="titulo"><h1>Tu carrito</h1><p>Cambia las cantidades y el total se actualiza al instante.</p></header><main><p id="vacio" hidden>Tu carrito está vacío. Agrega productos desde el <a href="catalogo.html">catálogo</a>.</p>
-<table id="tabla-carrito"><thead><tr><th>Producto</th><th>Precio</th><th>Cantidad</th><th>Subtotal</th><th></th></tr></thead><tbody id="cuerpo-carrito"></tbody></table>
-<p class="total">Total: <span id="total">$0</span></p>
-<p class="acciones"><button class="btn" id="btn-finalizar">Finalizar compra</button></p>
-<section id="checkout" hidden><h2>Finalizar compra</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>Carrito | The Coffee Shop</title>
+</head>
+<body>
+<nav aria-label="Navegación principal">
+<a class="logo" href="index.html" aria-label="The Coffee Shop, volver a Inicio">The Coffee Shop</a>
+<ul>
+<li>
+<a href="index.html">Inicio</a>
+</li>
+<li>
+<a href="registro.html">Registro</a>
+</li>
+<li>
+<a href="nosotros.html">Quiénes somos</a>
+</li>
+<li>
+<a href="catalogo.html">Catálogo</a>
+</li>
+<li>
+<a href="carrito.html" class="activo" aria-current="page">Carrito <span id="contador">0</span>
+</a>
+</li>
+<li>
+<a href="busqueda.html">Búsqueda</a>
+</li>
+</ul>
+</nav>
+<header class="titulo">
+<h1>Tu carrito</h1>
+<p>Cambia las cantidades y el total se actualiza al instante.</p>
+</header>
+<main>
+<p id="vacio" hidden>Tu carrito está vacío. Agrega productos desde el <a href="catalogo.html">catálogo</a>.</p>
+<div class="tabla-scroll">
+<table id="tabla-carrito">
+<thead>
+<tr>
+<th>Producto</th>
+<th>Precio</th>
+<th>Cantidad</th>
+<th>Subtotal</th>
+<th>
+</th>
+</tr>
+</thead>
+<tbody id="cuerpo-carrito">
+</tbody>
+</table>
+</div>
+<p class="total">Total: <span id="total">$0</span>
+</p>
+<p class="acciones">
+<button class="btn" id="btn-finalizar">Finalizar compra</button>
+</p>
+<section id="checkout" hidden>
+<p class="nota">Compra de demostración: no se realizan cargos ni pedidos reales. La opción de correo prepara el ticket en tu aplicación de correo para que tú lo envíes.</p>
+<h2>Finalizar compra</h2>
 <form id="form-pago" class="formulario" novalidate>
-<fieldset><legend>Método de pago</legend><label><input type="radio" name="pago" value="Tarjeta"> Tarjeta</label><label><input type="radio" name="pago" value="Efectivo"> Efectivo</label></fieldset>
-<fieldset><legend>Ticket</legend><label><input type="radio" name="ticket" value="impreso"> Impreso</label><label><input type="radio" name="ticket" value="correo"> Enviado al correo</label></fieldset>
-<div id="campo-correo" hidden><label for="correo-ticket">Correo para enviar el ticket</label><input type="text" id="correo-ticket" placeholder="tucorreo@ejemplo.com"></div>
-<button type="submit" class="btn">Confirmar compra</button><p class="aviso" id="error-pago" role="alert"></p></form>
-<div id="ticket" hidden></div></section></main><footer>Proyecto escolar · <a href="https://github.com/rubiesmeralda826-svg/cafeteria_prog_web1" target="_blank" rel="noopener">Repositorio</a> · <a href="https://rubiesmeralda826-svg.github.io/cafeteria_prog_web1/index.html">Sitio publicado</a></footer><div id="mensaje" role="status"></div><script src="script.js"></script></body></html>
+<fieldset>
+<legend>Método de pago</legend>
+<label>
+<input type="radio" name="pago" value="Tarjeta"> Tarjeta</label>
+<label>
+<input type="radio" name="pago" value="Efectivo"> Efectivo</label>
+</fieldset>
+<fieldset>
+<legend>Ticket</legend>
+<label>
+<input type="radio" name="ticket" value="impreso"> Impreso</label>
+<label>
+<input type="radio" name="ticket" value="correo"> Enviar por correo</label>
+</fieldset>
+<div id="campo-correo" hidden>
+<label for="correo-ticket">Correo para enviar el ticket</label>
+<input type="email" id="correo-ticket" autocomplete="email" placeholder="tucorreo@ejemplo.com">
+</div>
+<button type="submit" class="btn">Confirmar compra</button>
+<p class="aviso" id="error-pago" role="alert">
+</p>
+</form>
+<div id="ticket" hidden>
+</div>
+<div id="acciones-ticket" hidden>
+<button type="button" class="btn" id="btn-imprimir">Imprimir ticket</button> <a class="btn" id="enviar-ticket" hidden>Abrir correo con el ticket</a>
+<p class="nota" id="nota-ticket">
+</p>
+</div>
+</section>
+</main>
+<footer>Proyecto escolar · <a href="https://github.com/rubiesmeralda826-svg/cafeteria_prog_web1" target="_blank" rel="noopener">Repositorio</a> · <a href="https://rubiesmeralda826-svg.github.io/cafeteria_prog_web1/index.html">Sitio publicado</a>
+</footer>
+<div id="mensaje" role="status">
+</div>
+<script src="script.js">
+</script>
+</body>
+</html>

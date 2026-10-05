@@ -1,1 +1,131 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><title>Búsqueda | The Coffee Shop</title></head><body><nav><span class="logo">The Coffee Shop</span><ul><li><a href="index.html">Inicio</a></li><li><a href="registro.html">Registro</a></li><li><a href="nosotros.html">Quiénes somos</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="carrito.html">Carrito <span id="contador">0</span></a></li><li><a href="busqueda.html" class="activo">Búsqueda</a></li></ul></nav><header class="titulo"><h1>Buscar productos</h1><p>Escribe lo que se te antoja.</p></header><main><form class="buscar" id="form-busqueda"><input type="text" id="texto-busqueda" placeholder="Ej. café, pastel, té..." aria-label="Buscar productos"><button type="submit" class="btn">Buscar</button></form><section id="resultados"><h2 id="titulo-resultados">Escribe algo y presiona Buscar</h2><div class="grid" id="lista-resultados" hidden><article class="producto"><img src="img/chai.jpg" alt="Té Chai Latte"><div><h3>Té Chai Latte</h3><p>Té especiado con leche espumada y canela</p><span class="precio">$48</span><button class="btn btn-agregar" data-id="chai" data-img="chai" data-nombre="Té Chai Latte" data-precio="48">Agregar al carrito</button></div></article><article class="producto"><img src="img/espresso.jpg" alt="Espresso Doble"><div><h3>Espresso Doble</h3><p>Dos shots intensos con crema dorada</p><span class="precio">$40</span><button class="btn btn-agregar" data-id="espresso" data-img="espresso" data-nombre="Espresso Doble" data-precio="40">Agregar al carrito</button></div></article><article class="producto"><img src="img/galleta.jpg" alt="Galleta de Avena y Pasas"><div><h3>Galleta de Avena y Pasas</h3><p>Suave por dentro, horneada diario</p><span class="precio">$25</span><button class="btn btn-agregar" data-id="galleta" data-img="galleta" data-nombre="Galleta de Avena y Pasas" data-precio="25">Agregar al carrito</button></div></article><article class="producto"><img src="img/americano.jpg" alt="Cold Brew"><div><h3>Cold Brew</h3><p>Café infusionado en frío durante 12 horas</p><span class="precio">$55</span><button class="btn btn-agregar" data-id="cold-brew" data-img="americano" data-nombre="Cold Brew" data-precio="55">Agregar al carrito</button></div></article></div></section></main><footer>Proyecto escolar · <a href="https://github.com/rubiesmeralda826-svg/cafeteria_prog_web1" target="_blank" rel="noopener">Repositorio</a> · <a href="https://rubiesmeralda826-svg.github.io/cafeteria_prog_web1/index.html">Sitio publicado</a></footer><div id="mensaje" role="status"></div><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>Búsqueda | The Coffee Shop</title>
+</head>
+<body>
+<nav aria-label="Navegación principal">
+<a class="logo" href="index.html" aria-label="The Coffee Shop, volver a Inicio">The Coffee Shop</a>
+<ul>
+<li>
+<a href="index.html">Inicio</a>
+</li>
+<li>
+<a href="registro.html">Registro</a>
+</li>
+<li>
+<a href="nosotros.html">Quiénes somos</a>
+</li>
+<li>
+<a href="catalogo.html">Catálogo</a>
+</li>
+<li>
+<a href="carrito.html">Carrito <span id="contador">0</span>
+</a>
+</li>
+<li>
+<a href="busqueda.html" class="activo" aria-current="page">Búsqueda</a>
+</li>
+</ul>
+</nav>
+<header class="titulo">
+<h1>Buscar productos</h1>
+<p>Escribe lo que se te antoja. Los resultados se actualizan mientras escribes.</p>
+</header>
+<main>
+<form class="buscar" id="form-busqueda">
+<input type="text" id="texto-busqueda" maxlength="100" placeholder="Ej. café, pastel, té..." aria-label="Buscar productos">
+<button type="submit" class="btn">Buscar</button>
+</form>
+<section id="resultados" aria-live="polite" aria-atomic="true">
+<h2 id="titulo-resultados">Escribe para buscar productos</h2>
+<p id="estado-busqueda"></p>
+<div class="grid" id="lista-resultados" hidden>
+<article class="producto">
+<img src="img/americano.jpg" alt="Café Americano">
+<div>
+<h3>Café Americano</h3>
+<p>Espresso largo, suave y aromático</p>
+<span class="precio">$35</span>
+<button class="btn btn-agregar" data-id="americano" data-img="americano" data-nombre="Café Americano" data-precio="35">Agregar al carrito</button>
+</div>
+</article>
+<article class="producto">
+<img src="img/capuchino.jpg" alt="Cappuccino">
+<div>
+<h3>Cappuccino</h3>
+<p>Espresso con leche vaporizada y espuma</p>
+<span class="precio">$45</span>
+<button class="btn btn-agregar" data-id="capuchino" data-img="capuchino" data-nombre="Cappuccino" data-precio="45">Agregar al carrito</button>
+</div>
+</article>
+<article class="producto">
+<img src="img/latte-vainilla.jpg" alt="Latte de Vainilla">
+<div>
+<h3>Latte de Vainilla</h3>
+<p>Café con leche cremosa y toque de vainilla</p>
+<span class="precio">$50</span>
+<button class="btn btn-agregar" data-id="latte-vainilla" data-img="latte-vainilla" data-nombre="Latte de Vainilla" data-precio="50">Agregar al carrito</button>
+</div>
+</article>
+<article class="producto">
+<img src="img/frappuccino.jpg" alt="Frappuccino de Moka">
+<div>
+<h3>Frappuccino de Moka</h3>
+<p>Café frío con chocolate y crema batida</p>
+<span class="precio">$65</span>
+<button class="btn btn-agregar" data-id="frappuccino" data-img="frappuccino" data-nombre="Frappuccino de Moka" data-precio="65">Agregar al carrito</button>
+</div>
+</article>
+<article class="producto">
+<img src="img/cafe-de-olla.jpg" alt="Café de Olla">
+<div>
+<h3>Café de Olla</h3>
+<p>Receta tradicional con canela y piloncillo</p>
+<span class="precio">$38</span>
+<button class="btn btn-agregar" data-id="cafe-de-olla" data-img="cafe-de-olla" data-nombre="Café de Olla" data-precio="38">Agregar al carrito</button>
+</div>
+</article>
+<article class="producto">
+<img src="img/croissant.jpg" alt="Croissant de Mantequilla">
+<div>
+<h3>Croissant de Mantequilla</h3>
+<p>Hojaldrado, recién horneado</p>
+<span class="precio">$40</span>
+<button class="btn btn-agregar" data-id="croissant" data-img="croissant" data-nombre="Croissant de Mantequilla" data-precio="40">Agregar al carrito</button>
+</div>
+</article>
+<article class="producto">
+<img src="img/pastel.jpg" alt="Pastel de Chocolate">
+<div>
+<h3>Pastel de Chocolate</h3>
+<p>Rebanada con ganache de chocolate oscuro</p>
+<span class="precio">$55</span>
+<button class="btn btn-agregar" data-id="pastel" data-img="pastel" data-nombre="Pastel de Chocolate" data-precio="55">Agregar al carrito</button>
+</div>
+</article>
+<article class="producto">
+<img src="img/cafe-grano.jpg" alt="Café en Grano 250 g">
+<div>
+<h3>Café en Grano 250 g</h3>
+<p>Tostado artesanal de Chiapas</p>
+<span class="precio">$120</span>
+<button class="btn btn-agregar" data-id="cafe-grano" data-img="cafe-grano" data-nombre="Café en Grano 250 g" data-precio="120">Agregar al carrito</button>
+</div>
+</article>
+</div>
+</section>
+</main>
+<footer>Proyecto escolar · <a href="https://github.com/rubiesmeralda826-svg/cafeteria_prog_web1" target="_blank" rel="noopener">Repositorio</a> · <a href="https://rubiesmeralda826-svg.github.io/cafeteria_prog_web1/index.html">Sitio publicado</a>
+</footer>
+<div id="mensaje" role="status">
+</div>
+<script src="script.js">
+</script>
+</body>
+</html>

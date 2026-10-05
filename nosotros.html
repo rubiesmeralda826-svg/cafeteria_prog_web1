@@ -1,6 +1,83 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><title>Quiénes somos | The Coffee Shop</title></head><body><nav><span class="logo">The Coffee Shop</span><ul><li><a href="index.html">Inicio</a></li><li><a href="registro.html">Registro</a></li><li><a href="nosotros.html" class="activo">Quiénes somos</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="carrito.html">Carrito <span id="contador">0</span></a></li><li><a href="busqueda.html">Búsqueda</a></li></ul></nav><header class="titulo"><h1>Quiénes somos</h1><p>Somos un equipo de estudiantes que armó esta cafetería en línea como proyecto de programación web.</p></header><main><table><thead><tr><th>Nombre</th><th>Rol</th><th>Correo</th></tr></thead><tbody>
-<tr><td>Rubi Esmeralda De los Santos López</td><td>Catálogo, carrito y búsqueda</td><td>correo1@ejemplo.com</td></tr>
-<tr><td>Juan Manuel Nucamendi Díaz</td><td>Por definir</td><td>correo2@ejemplo.com</td></tr>
-<tr><td>Persona 3</td><td>Por definir</td><td>correo3@ejemplo.com</td></tr></tbody></table>
-<p class="acciones sep"><button class="btn" id="btn-vermas">Ver más</button></p>
-<div id="info-extra" hidden><p>The Coffee Shop nació de la idea de acercar el café de Chiapas a más personas. Cada producto de este sitio es de demostración y no se guarda ningún pedido real.</p></div></main><footer>Proyecto escolar · <a href="https://github.com/rubiesmeralda826-svg/cafeteria_prog_web1" target="_blank" rel="noopener">Repositorio</a> · <a href="https://rubiesmeralda826-svg.github.io/cafeteria_prog_web1/index.html">Sitio publicado</a></footer><div id="mensaje" role="status"></div><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>Quiénes somos | The Coffee Shop</title>
+</head>
+<body>
+<nav aria-label="Navegación principal">
+<a class="logo" href="index.html" aria-label="The Coffee Shop, volver a Inicio">The Coffee Shop</a>
+<ul>
+<li>
+<a href="index.html">Inicio</a>
+</li>
+<li>
+<a href="registro.html">Registro</a>
+</li>
+<li>
+<a href="nosotros.html" class="activo" aria-current="page">Quiénes somos</a>
+</li>
+<li>
+<a href="catalogo.html">Catálogo</a>
+</li>
+<li>
+<a href="carrito.html">Carrito <span id="contador">0</span>
+</a>
+</li>
+<li>
+<a href="busqueda.html">Búsqueda</a>
+</li>
+</ul>
+</nav>
+<header class="titulo">
+<h1>Quiénes somos</h1>
+<p>Somos un equipo de estudiantes que armó esta cafetería en línea como proyecto de programación web.</p>
+</header>
+<main>
+<div class="tabla-scroll">
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Rol</th>
+<th>Correo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rubi Esmeralda De los Santos López</td>
+<td>Catálogo + Carrito</td>
+<td>correo1@ejemplo.com</td>
+</tr>
+<tr>
+<td>Juan Manuel Nucamendi Díaz</td>
+<td>Registro + Búsqueda</td>
+<td>juanvesta123@gmail.com</td>
+</tr>
+<tr>
+<td>Persona 3</td>
+<td>Inicio + Quiénes somos</td>
+<td>correo3@ejemplo.com</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="acciones sep">
+<button class="btn" id="btn-vermas" aria-expanded="false" aria-controls="info-extra">Ver más</button>
+</p>
+<div id="info-extra" hidden>
+<p>The Coffee Shop nació de la idea de acercar el café de Chiapas a más personas. Cada producto de este sitio es de demostración y no se guarda ningún pedido real.</p>
+</div>
+</main>
+<footer>Proyecto escolar · <a href="https://github.com/rubiesmeralda826-svg/cafeteria_prog_web1" target="_blank" rel="noopener">Repositorio</a> · <a href="https://rubiesmeralda826-svg.github.io/cafeteria_prog_web1/index.html">Sitio publicado</a>
+</footer>
+<div id="mensaje" role="status">
+</div>
+<script src="script.js">
+</script>
+</body>
+</html>
